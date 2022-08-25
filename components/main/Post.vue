@@ -4,7 +4,8 @@
       <h3>Post title</h3>
       <small>
         <i class="el-icon-time"></i>
-        {{ new Date().toLocaleString() }}</small>
+        {{ new Date().toLocaleString() }}
+      </small>
     </header>
     <div class="post-body">
       <img
@@ -27,7 +28,8 @@
 export default {
   methods: {
     openPost() {
-
+      const id = 'test-id'
+      this.$router.push(`/post/${id}`)
     }
   }
 }
