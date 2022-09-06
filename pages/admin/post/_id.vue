@@ -102,16 +102,16 @@ export default {
         }
       })
     }
-   }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
- .page-wrap {
+.page-wrap {
   width: 600px;
- }
+}
 
- .mr {
+.mr {
   margin-right: 2rem;
- }
+}
 </style>

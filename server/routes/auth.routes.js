@@ -4,7 +4,7 @@ const router = Router()
 
 router.post('/admin/login', login)
 
-router.post('/admin/creare', createUser)
+router.post('/admin/create', createUser)
 
 
 module.exports = router
