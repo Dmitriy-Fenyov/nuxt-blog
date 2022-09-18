@@ -9,16 +9,16 @@
 
 
 export default {
- computed: {
+  computed: {
     error() {
       this.$store.getters.error
     }
- },
- watch: {
+  },
+  watch: {
   error(value) {
     this.$message.error(value.response.data.message)
   }
- }
+  }
 }
 
 </script>

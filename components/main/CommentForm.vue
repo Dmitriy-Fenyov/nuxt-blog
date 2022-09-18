@@ -16,7 +16,7 @@
       v-model.trim="controls.text"
       resize="none"
       :rows="2"
-     />
+    />
   </el-form-item>
 
   <el-form-item>

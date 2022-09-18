@@ -49,7 +49,7 @@ export const actions = {
     const cookieStr = process.browser
       ? document.cookie
       : this.app.context.req.headers.cookie
-
+      console.log('1')
       const cookies = Cookie.parse(cookieStr || '') || {}
       const token = cookies['jwt-token']
       if (isJWTValid(token)) {
