@@ -5,12 +5,13 @@ const posts = [
 ]
 
 export const actions = {
-  async fetchAdmin({}) {
-    return await new Promise(resolve => {
-      setTimeout(() => {
-        resolve(posts)
-      }, 1000)
-    })
+  async fetchAdmin({commit}) {
+    try {
+      return await this.$axios.$get('posts')
+    } catch (e) {
+      commit('setError', e, {root: true})
+      throw e
+    }
   },
   async remove({}, id) {
 
@@ -27,11 +28,7 @@ export const actions = {
       fd.append('text', text)
       fd.append('image', image, image.name)
 
-      return await new Promise(resolve => {
-        setTimeout(() => {
-          resolve()
-        }, 1000)
-      })
+      return await this.$axios.$post('/posts', fd)
     } catch (e) {
       commit('setError', e, {root: true})
       throw e

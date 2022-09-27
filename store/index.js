@@ -1,9 +1,9 @@
 export const state = () => ({
-  error: null
+  error: true
 })
 
 export const actions = {
-  nuxtServerinit({dispatch}) {
+  nuxtServerInit({dispatch}) {
     dispatch('auth/autoLogin')
   }
 }
